@@ -26,7 +26,10 @@ eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="a
 										<a class="nav-link" href="/">Sākumlapa</a>
 									</li>
 									<li class="nav-item">
-										<a class="nav-link" href="/authors">Izpilditaji</a>
+										<a class="nav-link" href="/authors">Autori</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="/albums">Albumi</a>
 									</li>
 								</ul>
 							</div>
