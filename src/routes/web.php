@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\IzpilditajuController;
+use App\Http\Controllers\AuthorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,4 +16,7 @@ use App\Http\Controllers\IzpilditajuController;
 */
 
 Route::get('/', [HomeController::class, 'index']);
-Route::get('/izpilditaji', [IzpilditajuController::class, 'list']);
+Route::get('/authors', [AuthorController::class, 'list']);
+Route::get('/authors/create', [AuthorController::class, 'create']);
+Route::post('/authors/put', [AuthorController::class, 'put']);
+Route::post('/authors/delete/{author}', [AuthorController::class, 'delete']);

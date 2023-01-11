@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Izpilditaji;
+use App\Models\Author;
 
-class IzpilditajuController extends Controller
+class AuthorController extends Controller
 {
     public function list()
 	{
@@ -38,9 +38,9 @@ class IzpilditajuController extends Controller
 		$author = new Author();
 		$author->name = $validatedData['name'];
 		$author->save();
-		return redirect('/izpilditaji');
+		return redirect('/authors');
 	}
-
+	
 	public function update(Author $author)
 	{
 		return view(
@@ -59,6 +59,12 @@ class IzpilditajuController extends Controller
 		]);
 		$author->name = $validatedData['name'];
 		$author->save();
+		return redirect('/authors');
+	}
+	
+	public function delete(Author $author)
+	{
+		$author->delete();
 		return redirect('/authors');
 	}
 
