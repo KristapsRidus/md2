@@ -22,6 +22,7 @@ eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="a
 							</button>
 							<div class="collapse navbar-collapse" id="navbarNav">
 								<ul class="navbar-nav">
+								
 									<li class="nav-item">
 										<a class="nav-link" href="/">Sākumlapa</a>
 									</li>
@@ -31,6 +32,14 @@ eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="a
 									<li class="nav-item">
 										<a class="nav-link" href="/albums">Albumi</a>
 									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="/logout">Beigt darbu</a>
+									</li>
+								
+									<li class="nav-item">
+										<a class="nav-link" href="/login">Pieslēgties</a>
+									</li>
+								
 								</ul>
 							</div>
 						</nav>

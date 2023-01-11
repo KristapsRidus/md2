@@ -5,9 +5,15 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Album;
 use App\Http\Request\AlbumRequest;
+use App\Models\Author;
 
 class AlbumController extends Controller
 {
+	public function __construct()
+	{
+		$this->middleware('auth');
+	}
+	
     public function list()
 	{
 		$items = Album::orderBy('name', 'asc')->get();
@@ -22,13 +28,13 @@ class AlbumController extends Controller
 	
 	public function create()
 	{
-		$authors = Author::orderBy('name', 'asc')->get();
+		$author = Author::orderBy('name', 'asc')->get();
 		return view(
 			'album.form',
 			[
 				'title' => 'Pievienot Albumu',
 				'album' => new Album(),
-				'authors' => $authors,
+				'authors' => $author,
 			]
 		);
 	}
