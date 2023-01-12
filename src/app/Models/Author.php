@@ -12,5 +12,10 @@ class Author extends Model
 	public function albums()
 	{
 		return $this->hasMany(Album::class);
-	}	
+	}
+		
+	public function zanri()
+	{
+		return $this->hasMany(Zanrs::class);
+	}
 }

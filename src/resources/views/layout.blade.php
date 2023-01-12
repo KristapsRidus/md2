@@ -8,9 +8,10 @@
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-
 beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-
 eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-		<script src="/js/main.js"></script>
+		
 	</head>
 	<body>
+		<script src="/js/main.js"></script>
 		<div class="bg-light mb-4 py-4">
 			<div class="container">
 				<div class="row">
@@ -22,24 +23,27 @@ eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="a
 							</button>
 							<div class="collapse navbar-collapse" id="navbarNav">
 								<ul class="navbar-nav">
-								
-									<li class="nav-item">
-										<a class="nav-link" href="/">Sākumlapa</a>
-									</li>
-									<li class="nav-item">
-										<a class="nav-link" href="/authors">Autori</a>
-									</li>
-									<li class="nav-item">
-										<a class="nav-link" href="/albums">Albumi</a>
-									</li>
-									<li class="nav-item">
-										<a class="nav-link" href="/logout">Beigt darbu</a>
-									</li>
-								
-									<li class="nav-item">
-										<a class="nav-link" href="/login">Pieslēgties</a>
-									</li>
-								
+									@if(Auth::check())
+										<li class="nav-item">
+											<a class="nav-link" href="/">Sākumlapa</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" href="/authors">Autori</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" href="/albums">Albumi</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" href="/zanri">Žanri</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" href="/logout">Beigt darbu</a>
+										</li>
+									@else
+										<li class="nav-item">
+											<a class="nav-link" href="/login">Pieslēgties</a>
+										</li>
+									@endif
 								</ul>
 							</div>
 						</nav>

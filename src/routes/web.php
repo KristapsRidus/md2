@@ -5,6 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AuthorController;
 use App\Http\Controllers\AlbumController;
 use App\Http\Controllers\AuthorizationController;
+use App\Http\Controllers\ZanrsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,10 +19,13 @@ use App\Http\Controllers\AuthorizationController;
 */
 
 Route::get('/', [HomeController::class, 'index']);
+
 Route::get('/authors', [AuthorController::class, 'list']);
 Route::get('/authors/create', [AuthorController::class, 'create']);
 Route::post('/authors/put', [AuthorController::class, 'put']);
 Route::post('/authors/delete/{author}', [AuthorController::class, 'delete']);
+Route::post('/authors/update/{author}', [AuthorController::class, 'update']);
+Route::post('/authors/patch/{author}', [AuthorController::class, 'patch']);
 
 Route::get('/albums', [AlbumController::class, 'list']);
 Route::get('/albums/create', [AlbumController::class, 'create']);
@@ -33,3 +37,10 @@ Route::post('/albums/delete/{album}', [AlbumController::class, 'delete']);
 Route::get('/login', [AuthorizationController::class, 'login'])->name('login');
 Route::post('/auth', [AuthorizationController::class, 'authenticate']);
 Route::get('/logout', [AuthorizationController::class, 'logout']);
+
+Route::get('/zanri', [ZanrsController::class, 'list']);
+Route::get('/zanri/create', [ZanrsController::class, 'create']);
+Route::post('/zanri/put', [ZanrsController::class, 'put']);
+Route::get('/zanri/update/{zanrs}', [ZanrsController::class, 'update']);
+Route::post('/zanri/patch/{zanrs}', [ZanrsController::class, 'patch']);
+Route::post('/zanri/delete/{zanrs}', [ZanrsController::class, 'delete']);

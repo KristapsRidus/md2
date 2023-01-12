@@ -1,13 +1,16 @@
 @extends('layout')
 @section('content')
 	<h1>{{ $title }}</h1>
+	
 	@if ($errors->any())
 		<div class="alert alert-danger">
 			Neizdevās pieslēgties. Lūdzu, mēģiniet vēlreiz!
 		</div>
 	@endif
+	
 	<form method="post" action="/auth">
 		@csrf
+		
 		<div class="mb-3">
 			<label for="login-name" class="form-label">Lietotāja vārds</label>
 			<input
@@ -19,6 +22,7 @@
 				autofocus
 			>
 		</div>
+		
 		<div class="mb-3">
 			<label for="login-password" class="form-label">Parole</label>
 			<input

@@ -30,7 +30,7 @@ class AuthorizationController extends Controller
 		$credentials = $request->only('name', 'password');
 		if (Auth::attempt($credentials)) {
 			$request->session()->regenerate();
-			return redirect('/albums');
+			return redirect('albums');
 		}
 		return back()->withErrors([
 			'name' => 'Pieslēgšanās neveiksmīga',
