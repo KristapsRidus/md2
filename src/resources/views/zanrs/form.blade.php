@@ -5,8 +5,8 @@
 		<div class="alert alert-danger">Lūdzu, novērsiet radušās kļūdas!</div>
 	@endif
 	<form method="post" action="{{ $zanrs->exists ? '/zanri/patch/' . $zanrs->id : '/zanri/put' }}"
-
 		@csrf
+		
 		<div class="mb-3">
 			<label for="zanrs-name" class="form-label">Žanra nosaukums</label>
 			<input
