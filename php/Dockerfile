@@ -17,6 +17,10 @@ RUN sed -i -e 's/;date.timezone =/date.timezone = "Europe\/Riga"/' "$PHP_INI_DIR
 RUN sed -i -e 's/;date.default_latitude = 31.7667/date.default_latitude = 56.9514/' "$PHP_INI_DIR/php.ini"
 RUN sed -i -e 's/;date.default_longitude = 35.2333/date.default_longitude = 24.1131/' "$PHP_INI_DIR/php.ini"
 
+# Install Node.js
+RUN curl -sL https://deb.nodesource.com/setup_16.x | bash -
+RUN apt-get install -y nodejs
+
 # Expose port
 EXPOSE 9000
 

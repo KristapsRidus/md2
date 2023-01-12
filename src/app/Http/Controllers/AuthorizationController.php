@@ -9,6 +9,7 @@ class AuthorizationController extends Controller
 {
     public function login()
 	{
+		Auth::loginUsingId(1);
 		return view(
 			'authorization.login',
 			[

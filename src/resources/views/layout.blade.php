@@ -12,6 +12,7 @@ eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="a
 	</head>
 	<body>
 		<script src="/js/main.js"></script>
+		@yield('content')
 		<div class="bg-light mb-4 py-4">
 			<div class="container">
 				<div class="row">

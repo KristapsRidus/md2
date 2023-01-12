@@ -6,7 +6,7 @@ use App\Http\Controllers\AuthorController;
 use App\Http\Controllers\AlbumController;
 use App\Http\Controllers\AuthorizationController;
 use App\Http\Controllers\ZanrsController;
-
+use App\Http\Controllers\DataController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -44,3 +44,10 @@ Route::post('/zanri/put', [ZanrsController::class, 'put']);
 Route::get('/zanri/update/{zanrs}', [ZanrsController::class, 'update']);
 Route::post('/zanri/patch/{zanrs}', [ZanrsController::class, 'patch']);
 Route::post('/zanri/delete/{zanrs}', [ZanrsController::class, 'delete']);
+
+// Data routes
+Route::prefix('data')->group(function () {
+	Route::get('/get-top-albums', [DataController::class, 'getTopAlbums']);
+	Route::get('/get-album/{album}', [DataController::class, 'getAlbum']);
+	Route::get('/get-related-albums/{album}', [DataController::class, 'getRelatedAlbums']);
+});

@@ -16,8 +16,8 @@
 			<td>{{ $zanrs->id }}</td>
 			<td>{{ $zanrs->name }}</td>
 			<td><a href="/zanri/update/{{ $zanrs->id }}" class="btn btn-outline-primary btnsm">Labot</a> / 
-			<form action="/authors/delete/{{ $author->id }}" method="post" class="deletionform d-inline">
-			@csrf
+			<form action="/zanri/delete/{{ $zanrs->id }}" method="post" class="deletionform d-inline">
+				{{csrf_field()}}
 				<button type="submit" class="btn btn-outline-danger btn-sm">Dzēst</button>
 			</form>
 			</td>

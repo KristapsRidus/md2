@@ -15,7 +15,7 @@
 			</tr>
 		</thead>
 		<tbody>
-		@foreach($items as $book)
+		@foreach($items as $album)
 			<tr>
 				<td>{{ $album->id }}</td>
 				<td>{{ $album->name }}</td>

@@ -7,6 +7,7 @@ use App\Models\Author;
 
 class AuthorController extends Controller
 {
+	
 	public function __construct()
 	{
 		$this->middleware('auth');
@@ -74,3 +75,4 @@ class AuthorController extends Controller
 	}
 
 }
+?>
