@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Album;
-use App\Http\Request\AlbumRequest;
+use App\Http\Requests\AlbumRequest;
 use App\Models\Author;
 
 class AlbumController extends Controller
@@ -46,7 +46,7 @@ class AlbumController extends Controller
 			'album.form',
 			[
 				'title' => 'Rediģēt Albumu',
-				'albums' => $album,
+				'album' => $album,
 				'authors' => $authors,
 			]
 		);

@@ -12,7 +12,7 @@ eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="a
 	</head>
 	<body>
 		<script src="/js/main.js"></script>
-		@yield('content')
+		
 		<div class="bg-light mb-4 py-4">
 			<div class="container">
 				<div class="row">
@@ -52,5 +52,22 @@ eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="a
 				</div>
 			</div>
 		</div>
+		<div class="container mb-4">
+			<div class="row">
+				<main class="col-md-12">
+					@yield('content')
+				</main>
+			</div>
+		</div>
+		<div class="bg-primary text-white py-4 mt-4">
+			<div class="container">
+				<div class="row">
+					<footer class="col-md-12">
+						Ventspils Augstskola, 2023
+					</footer>
+				</div>
+			</div>
+		</div>
+
 	</body>
 </html>

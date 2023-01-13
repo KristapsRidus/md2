@@ -24,7 +24,7 @@ Route::get('/authors', [AuthorController::class, 'list']);
 Route::get('/authors/create', [AuthorController::class, 'create']);
 Route::post('/authors/put', [AuthorController::class, 'put']);
 Route::post('/authors/delete/{author}', [AuthorController::class, 'delete']);
-Route::post('/authors/update/{author}', [AuthorController::class, 'update']);
+Route::get('/authors/update/{author}', [AuthorController::class, 'update']);
 Route::post('/authors/patch/{author}', [AuthorController::class, 'patch']);
 
 Route::get('/albums', [AlbumController::class, 'list']);
